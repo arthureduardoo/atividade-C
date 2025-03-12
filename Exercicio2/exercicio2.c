@@ -1,26 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    float n1, n2, n3, media;
+    float nota;
+    float frequencia;
 
-    // Entrada de dados
-    printf("Digite a primeira nota: ");
-    scanf("%f", &n1);
-    printf("Digite a segunda nota: ");
-    scanf("%f", &n2);
-    printf("Digite a terceira nota: ");
-    scanf("%f", &n3);
+    // Entrada dos dados do estudante
+    printf("Digite a nota do estudante: ");
+    scanf("%f", &nota);
 
-    // Cálculo da média
-    media = (n1 + n2 + n3) / 3;
+    printf("Digite a frequência do estudante (em %%): ");
+    scanf("%f", &frequencia);
 
-    // Condicional para verificar situação
-    if (media >= 7.0) {
-        printf("Aluno APROVADO com média: %.2f\n", media);
-    } else if (media >= 5.0) {
-        printf("Aluno em RECUPERAÇÃO com média: %.2f\n", media);
+    // Lógica para verificar aprovação
+    if (nota >= 7.0 && frequencia >= 75.0) {
+        printf("Estudante APROVADO!\n");
     } else {
-        printf("Aluno REPROVADO com média: %.2f\n", media);
+        printf("Estudante REPROVADO!\n");
     }
 
     return 0;
